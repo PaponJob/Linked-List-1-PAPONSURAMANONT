@@ -28,12 +28,14 @@ void LL::insert_node(string n,int a){
   nodePtr new_node=new node(a,n);
   //2. Connect
   if(hol==NULL) hol=new_node;
-  else{//connect to the last no
+  else{//connect to the last node
     nodePtr t=hol;
-    while(t->get_next()) t=t->get_next();
+    while(t->get_next()!=NULL) t=t->get_next(); //while t is moving, set t to point to the new node
     t->set_next(new_node);
   }
+  size++;
 }
+
 
 void LL::print_all(){
   nodePtr t;

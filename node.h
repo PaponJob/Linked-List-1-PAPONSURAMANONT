@@ -29,7 +29,7 @@ void node::print(){
 
 
 node::~node(){
-  cout<<name<<"delete"<<endl;
+  cout<<name<<"Delete"<<endl;
 }
 
 nodePtr node::get_next(){
